@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="offset-lg-2 col-lg-8">
+		<h2>#i18n{module.extend.mydashboard.dashboardextend.pageTitle}</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<th>#i18n{module.extend.mydashboard.dashboardextend.resourceTypeLabel}</th>
+					<th>#i18n{module.extend.mydashboard.dashboardextend.totalLabel}</th>
+				</thead>
+				<tbody>
+					<#list extend_statistics_list?keys as key>
+						<tr>
+							<td>${key}</td>
+							<td>${extend_statistics_list[key]}</td>
+						</tr>
+					</#list>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
