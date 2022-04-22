@@ -71,7 +71,7 @@ public class MyDashboardComponentExtendStatistics extends MyDashboardComponent
     private static final String MARK_EXTEND_STATISTICS_LIST      = "extend_statistics_list";
     
     private static final String DASHBOARD_COMPONENT_ID           = "extend.myDashboardComponentExtenderStatistics";
-    private static final String MESSAGE_COMPONENT_DESCRIPTION    = "module.mydashboard.extend.myDashboardComponentExtenderStatistics.description";
+    private static final String MESSAGE_COMPONENT_DESCRIPTION    = "module.extend.mydashboard.myDashboardComponentExtenderStatistics.description";
 
     @Inject
     @Named( ResourceExtenderHistoryService.BEAN_SERVICE )
