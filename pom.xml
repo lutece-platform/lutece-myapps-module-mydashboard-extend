@@ -56,7 +56,13 @@
             <type>lutece-plugin</type>
         </dependency>
     </dependencies>
-
+     <scm>
+            <connection>scm:git:https://github.com/lutece-platform/lutece-myapps-module-mydashboard-extend.git</connection>
+            <developerConnection>scm:git:https://github.com/lutece-platform/lutece-myapps-module-mydashboard-extend.git</developerConnection>
+            <url>https://github.com/lutece-platform/lutece-myapps-module-mydashboard-extend.git</url>
+          <tag>HEAD</tag>
+      </scm>
+    
     <properties>
         <componentName>extend-mydashboard</componentName>
         <jiraProjectName>EXTENDMYDASHBOARD</jiraProjectName>
