@@ -1,21 +1,22 @@
-<div class="row">
-	<div class="offset-lg-2 col-lg-8">
-		<h2>#i18n{module.extend.mydashboard.dashboardextend.pageTitle}</h2>
-		<div class="table-responsive">
-			<table class="table table-striped">
-				<thead>
-					<th>#i18n{module.extend.mydashboard.dashboardextend.resourceTypeLabel}</th>
-					<th>#i18n{module.extend.mydashboard.dashboardextend.totalLabel}</th>
-				</thead>
-				<tbody>
-					<#list extend_statistics_list?keys as key>
-						<tr>
-							<td>${key}</td>
-							<td>${extend_statistics_list[key]}</td>
-						</tr>
-					</#list>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
+<@cCard title='#i18n{module.extend.mydashboard.dashboardextend.pageTitle}' id='extend-mydashboard-statistics'>
+	<#if extend_statistics_list?has_content>
+		<@cTable id='' collapsible=false>
+			<@cThead>
+				<@cTr>
+					<@cTh>#i18n{module.extend.mydashboard.dashboardextend.resourceTypeLabel}</@cTh>
+					<@cTh>#i18n{module.extend.mydashboard.dashboardextend.totalLabel}</@cTh>
+				</@cTr>
+			</@cThead>
+			<@cTbody>
+				<#list extend_statistics_list?keys as key>
+					<@cTr>
+						<@cTd>${extender_types[key]!key}</@cTd>
+						<@cTd>${extend_statistics_list[key]}</@cTd>
+					</@cTr>
+				</#list>
+			</@cTbody>
+		</@cTable>
+	<#else>
+		<@cEmpty />
+	</#if>
+</@cCard>
